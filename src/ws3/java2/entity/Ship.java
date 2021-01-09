@@ -19,7 +19,7 @@ public class Ship extends Vehicle{
 		this.replacement = replacement;
 	}
 
-	
+	@Override
 	public void displayInfo() {
 		super.displayInfo();
 		System.out.println(" ¹è ¼ö ·® : " + this.replacement + "Åæ");
