@@ -1,50 +1,13 @@
 package ws3.java2.entity;
 
-public class Airplane {
-	private String modelName;
-	private int maxSpeed;
-	private int numberLimit;
+public class Airplane extends Vehicle{
+	
 	private int numOfEngine;
-	private boolean available;
 	
 	public Airplane(String modelName, int maxSpeed, int numberLimit, int numOfEngine) {
-		
-		this.modelName = modelName;
-		this.maxSpeed = maxSpeed;
-		this.numberLimit = numberLimit;
+		super(modelName, maxSpeed, numberLimit);
 		this.numOfEngine = numOfEngine;
 	}
-
-	
-	public String getModelName() {
-		return modelName;
-	}
-
-
-	public void setModelName(String modelName) {
-		this.modelName = modelName;
-	}
-
-
-	public int getMaxSpeed() {
-		return maxSpeed;
-	}
-
-
-	public void setMaxSpeed(int maxSpeed) {
-		this.maxSpeed = maxSpeed;
-	}
-
-
-	public int getNumberLimit() {
-		return numberLimit;
-	}
-
-
-	public void setNumberLimit(int numberLimit) {
-		this.numberLimit = numberLimit;
-	}
-
 
 	public int getNumOfEngine() {
 		return numOfEngine;
@@ -56,21 +19,9 @@ public class Airplane {
 	}
 
 
-	public boolean isAvailable() {
-		return available;
-	}
-
-
-	public void setAvailable(boolean available) {
-		this.available = available;
-	}
-
-
+	@Override
 	public void displayInfo() {
-		System.out.println("-------------------------------------------");
-		System.out.println(" ¸ğ µ¨ ¸í : " + this.modelName);
-		System.out.println(" ÃÖ°í¼Óµµ : " + this.maxSpeed + "km/h");
-		System.out.println(" ÃÖ´ëÁ¤¿ø : " + this.numberLimit + "¸í");
-		System.out.println(" ¿£Áø°³¼ö : " + this.numOfEngine + "°³");
+		super.displayInfo();
+		System.out.println(" Â¿Â£ÃÃ¸Â°Â³Â¼Ã¶ : " + this.numOfEngine + "Â°Â³");
 	}
 }

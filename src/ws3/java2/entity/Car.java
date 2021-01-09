@@ -1,42 +1,13 @@
 package ws3.java2.entity;
 
-public class Car {
-	private String modelName;
-	private int maxSpeed;
-	private int numberLimit;
+public class Car extends Vehicle{
+	
 	private int mileage;
-	private boolean available;
 	
 	public Car(String modelName, int maxSpeed, int numberLimit, int mileage) {
 		
-		this.modelName = modelName;
-		this.maxSpeed = maxSpeed;
-		this.numberLimit = numberLimit;
+		super(modelName, maxSpeed, numberLimit);
 		this.mileage = mileage;
-	}
-
-	public String getModelName() {
-		return modelName;
-	}
-
-	public void setModelName(String modelName) {
-		this.modelName = modelName;
-	}
-
-	public int getMaxSpeed() {
-		return maxSpeed;
-	}
-
-	public void setMaxSpeed(int maxSpeed) {
-		this.maxSpeed = maxSpeed;
-	}
-
-	public int getNumberLimit() {
-		return numberLimit;
-	}
-
-	public void setNumberLimit(int numberLimit) {
-		this.numberLimit = numberLimit;
 	}
 
 	public int getMileage() {
@@ -47,19 +18,8 @@ public class Car {
 		this.mileage = mileage;
 	}
 
-	public boolean isAvailable() {
-		return available;
-	}
-
-	public void setAvailable(boolean available) {
-		this.available = available;
-	}
-
 	public void displayInfo() {
-		System.out.println("-------------------------------------------");
-		System.out.println(" ¸ð µ¨ ¸í : " + this.modelName);
-		System.out.println(" ÃÖ°í¼Óµµ : " + this.maxSpeed + "km/h");
-		System.out.println(" ÃÖ´ëÁ¤¿ø : " + this.numberLimit + "¸í");
-		System.out.println(" Æò±Õ¿¬ºñ : " + this.mileage + "km/l");
+		super.displayInfo();
+		System.out.println(" Ã†Ã²Â±Ã•Â¿Â¬ÂºÃ± : " + this.mileage + "km/l");
 	}
 }
